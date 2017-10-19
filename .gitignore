@@ -1,5 +1,4 @@
-/node_modules
-/wwwroot
+wwwroot/arcgis_js_api
 # Logs
 logs
 *.log
