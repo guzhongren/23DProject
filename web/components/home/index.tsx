@@ -3,7 +3,7 @@ import $ = require("jquery");
 // antd Test
 // import { Button } from "antd";
 import { Button, ButtonGroup } from 'reactstrap';
-import { EsriMapExt } from "../baseComponents/map";
+import { EsriMapExt } from "../baseComponents/map/esriMap";
 export interface IndexProps { compiler: string; framework: string; }
 
 // 'HelloProps' describes the shape of props.
@@ -25,7 +25,7 @@ export class Home1 extends React.Component<IndexProps, undefined> {
                 {/*<Button onClick={this.handleOnclick.bind(this)}>antd Test</Button>*/}
 
                 {/*react-bootstrap*/}
-                <div><img src={require<string>("./img/file_resource.png")} /></div>
+                <div><img src={require("./img/file_resource.png")} /></div>
                 <ButtonGroup>
                     <Button color="primary">Left</Button>{' '}
                     <Button color="secondary">Middle</Button>{' '}
