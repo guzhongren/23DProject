@@ -11,14 +11,21 @@ const stamenTonerAttr = 'Map tiles by <a href="http://stamen.com">Stamen Design<
 const mapCenter = [36.05, 103.75];
 const zoomLevel = 12;
 export class LeafletMap extends React.Component<any, any>{
+    leafletMap;
     constructor(props: any, state: any) {
         super(props, state);
         this.state = {
         }
-    }
+    };
+    componentDidMount() {
+        const leafletMap = this.leafletMap.leafletElement;
+        leafletMap.on('zoomend', () => {
+            window.console.log('Current zoom level -> ', leafletMap.getZoom());
+        });
+    };
     render() {
         return (
-            <Map center={mapCenter} zoom={zoomLevel} className="leafletStyle" style={{ height: "100%" }}>
+            <Map ref={map => {this.leafletMap = map}} center={mapCenter} zoom={zoomLevel} className="leafletStyle" style={{ height: "100%" }}>
                 <TileLayer
                     attribution={stamenTonerAttr}
                     url={osm}
