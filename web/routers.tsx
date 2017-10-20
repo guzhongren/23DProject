@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom'
 import { Home1 } from "./components/home";
 import { ProjectNavBar } from "./components/navBar";
-import { MapboxDemo } from "./components/baseComponents/map/mapbox";
+import { Mapbox } from "./components/baseComponents/map/mapbox";
 // import { EsriMapExt } from "./components/baseComponents/map/esriMap";
 import { LeafletMap } from "./components/baseComponents/map/leaflet";
 
@@ -28,12 +28,12 @@ const Index = () => (
 )
 const Home = () => (
   <div style={{ width: "100%", height: "calc(100% - 56px)" }}>
-    <MapboxDemo />
+    <Mapbox />
   </div>
 )
 const Test = () => (
   // <Home1 compiler={"ts"} framework={"react"} />
-  <MapboxDemo />
+  <Mapbox />
 );
 // const AGS = () => (
 //   <EsriMapExt />
