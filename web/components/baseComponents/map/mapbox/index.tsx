@@ -38,6 +38,12 @@ export class Mapbox extends React.Component<Props, Status>{
         this.addControl(this.map);
         this.props.createdMap ?this.props.createdMap(map) :null;
     };
+    /**
+     * 添加控件
+     * 
+     * @param {Map} map 
+     * @memberof Mapbox
+     */
     addControl(map:Map){
         let navigationControl = new NavigationControl();
         map.addControl(navigationControl,"top-left");

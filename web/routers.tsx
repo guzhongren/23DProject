@@ -20,8 +20,8 @@ const Index = () => (
   <Router basename="/">
     <div style={{ height: "100%", width: "100%" }}>
       <ProjectNavBar projectName={"23D一体化研究"} />
-      <Route exact path="/" component={Home} ></Route>
-      {/* <Route path="/test" component={Test} ></Route> */}
+      <Route exact path="/" component={Mapbox} ></Route>
+      <Route path="/mapbox" component={Mapbox} ></Route>
       {/* <Route path="/ags" component={AGS} ></Route> */}
     </div>
   </Router>

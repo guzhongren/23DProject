@@ -2,46 +2,44 @@
  * ../routers.tsx
  */
 
-import * as React from "react";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, NavDropdown } from "reactstrap";
+import  * as React from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+export interface Props {
+    projectName?: string
+}
+interface States {
+    projectName?: string,
+    isOpen?: boolean
+}
+export class ProjectNavBar extends React.Component<Props, States> {
+  constructor(props) {
+    super(props);
 
-export interface ProjectNavBarProps {
-    projectName?: React.ReactNode | string;// 项目名称
-}
-export interface ProjextNavBarState {
-    projectName?: React.ReactNode | string;// 项目名称
-    isOpen?: boolean; // 是否处于移动端
-}
-export class ProjectNavBar extends React.Component<ProjectNavBarProps, ProjextNavBarState>{
-    constructor(props: ProjectNavBarProps, state: ProjextNavBarState) {
-        super(props);
-        this.state = {
-            projectName: this.props.projectName ? this.props.projectName : "React脚手架",
-            isOpen: false
-        };
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+        projectName: this.props.projectName? this.props.projectName: "测试框架",
+        isOpen: false
     };
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-    render() {
-        return (
-            <Navbar color="faded" light toggleable>
-                <NavbarToggler right onClick={this.toggle.bind(this)} />
-                <NavbarBrand href="/">{this.state.projectName}</NavbarBrand>
-                <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/test">测试页</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/ags">AGS</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        )
-    }
-
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+        <Navbar color="faded" dark expand="md">
+          <NavbarBrand href="/">{this.state.projectName}</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Nav className="ml-auto" >
+              <NavItem>
+                <NavLink href="/mapbox">Mapbox</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/Deck.gl">Deck.gl</NavLink>
+              </NavItem>
+            </Nav>
+        </Navbar>
+    );
+  }
 }
