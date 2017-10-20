@@ -19,7 +19,7 @@ import { LeafletMap } from "./components/baseComponents/map/leaflet";
 const Index = () => (
   <Router basename="/">
     <div style={{ height: "100%", width: "100%" }}>
-      <ProjectNavBar projectName={"React 脚手架测试框架"} />
+      <ProjectNavBar projectName={"23D一体化研究"} />
       <Route exact path="/" component={Home} ></Route>
       {/* <Route path="/test" component={Test} ></Route> */}
       {/* <Route path="/ags" component={AGS} ></Route> */}
