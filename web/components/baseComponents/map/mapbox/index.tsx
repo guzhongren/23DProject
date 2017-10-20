@@ -60,13 +60,7 @@ export class Mapbox extends React.Component<Props, Status>{
         };
         let mapStyle = "mapbox://styles/mapbox/streets-v9";
         return (
-            <MapboxCom onStyleLoad= {this.onCreatedMapbox.bind(this)} ref={(map) => {console.log(map)}} containerStyle = {containerStyle} style = {mapStyle}>
-                {/* <Layer
-                    type="symbol"
-                    id="marker"
-                    layout={{ "icon-image": "marker-15" }}>
-                    <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
-                </Layer> */}
+            <MapboxCom onStyleLoad= {this.onCreatedMapbox.bind(this)} containerStyle = {containerStyle} style = {mapStyle}>
             </MapboxCom>
         )
     }

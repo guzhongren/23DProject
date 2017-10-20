@@ -46,7 +46,9 @@ git clone https://github.com/guzhongren/23DProject.git
     在浏览器中打开wwwroot下的index.html页面即可
     ### 效果
     ![23D](./wwwroot/imgs/23D.png)
-
+### 效果
+![Circle](./wwwroot/imgs/addCircle.png)
+<center>添加圆及图片</center>
 ### 参考
 
 React-Mapbox: https://www.npmjs.com/package/react-mapbox-gl
