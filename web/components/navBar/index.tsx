@@ -5,10 +5,10 @@
 import * as React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, DropdownToggle, NavDropdown, DropdownMenu, DropdownItem } from 'reactstrap';
 export interface Props {
-    projectName?: string
+    projectConfig?: any
 }
 interface States {
-    projectName?: string,
+    projectConfig?: any,
     isOpen?: boolean,
     isDropdownOpen?: boolean
 }
@@ -18,7 +18,7 @@ export class ProjectNavBar extends React.Component<Props, States> {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            projectName: this.props.projectName ? this.props.projectName : "测试框架",
+            projectConfig: this.props.projectConfig,
             isOpen: false,
             isDropdownOpen: false
         };
@@ -31,10 +31,10 @@ export class ProjectNavBar extends React.Component<Props, States> {
     };
     render() {
         return (
-            <Navbar color="faded" dark expand="md">
-                <NavbarBrand href="/">{this.state.projectName}</NavbarBrand>
-                <Nav className="ml-auto" >
-                <NavItem>
+            <Navbar color="faded" inverse expand="md">
+                <NavbarBrand href="/">{this.state.projectConfig.name}</NavbarBrand>
+                <Nav className="ml-auto">
+                    <NavItem>
                         <NavLink href="/circle">circle</NavLink>
                     </NavItem>
                     <NavItem>

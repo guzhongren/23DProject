@@ -1,32 +1,29 @@
 import * as React from 'react';
-import ReactMapboxGl, { Feature } from "react-mapbox-gl";
-import { Map,Layer } from "mapbox-gl";
+import ReactMapboxGl from "react-mapbox-gl";
+import  {Map,Layer } from "mapbox-gl";
 import { Button } from "reactstrap";
 import { Mapbox } from "../../baseComponents/map/mapbox"
 export interface Props {
+    config: any
 }
 interface State {
-    hasMap: Boolean
+    config?: any,
 }
 export class CircleDemo extends React.Component<Props, State>{
     map: Map;
+    
     constructor(Props) {
         super(Props);
         this.state = {
-            hasMap: false
+            config: this.props.config,
         }
-    }
+    };
+    
     componentWillMount() {
-
     };
     exportMap(map: Map) {
-        this.setState({
-            hasMap: true
-        }, () => {
-            this.map = map;
-            this.addCircleLayer();
-        })
-
+        this.map = map;
+        this.addCircleLayer();
     }
     /**
      * 添加circle
@@ -35,11 +32,6 @@ export class CircleDemo extends React.Component<Props, State>{
      */
     addCircleLayer() {
         let _self = this;
-        _self.map.setCenter([-122.447303, 37.753574]);
-        _self.map.on('styleLoad', (map) =>{
-            console.log("styleLaod");
-        });
-        // _self.map.setStyle('mapbox://styles/mapbox/light-v9')
         _self.map.setZoom(12);
         _self.map.addLayer({
             'id': 'population',
@@ -98,7 +90,7 @@ export class CircleDemo extends React.Component<Props, State>{
     }
     render() {
         return (
-            <Mapbox createdMap={this.exportMap.bind(this)}>
+            <Mapbox center={this.state.config.center} mapboxParams={this.state.config.mapboxParams} mapboxContainerStyle={this.state.config.containerStyle} mapboxStyle={this.state.config.style} onCreatedMap={this.exportMap.bind(this)}>
                 
             </Mapbox>
         )
