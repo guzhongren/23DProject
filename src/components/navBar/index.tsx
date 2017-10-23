@@ -31,24 +31,31 @@ export default class ProjectNavBar extends React.Component<Props, States> {
     //     });
     // };
     render() {
+        const deckglMenu = (
+            <Menu>
+                <Menu.Item>
+                    <a href="deckgl">DeckGl</a>
+                </Menu.Item>
+            </Menu>
+        )
         const menu = (
             <Menu>
                 <Menu.Item>
-                    <a  rel="noopener noreferrer" href="/circle">circle</a>
+                    <a  href="circle">mapbox3D</a>
                 </Menu.Item>
                 <Menu.Item>
-                    <a  href="3D">3D</a>
+                    <a  href="mapbox3D">mapbox3D</a>
                 </Menu.Item>
-                {/* <Menu.Item>
-                    <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>
-                </Menu.Item> */}
             </Menu>
         );
         return (
             <Row className="projectNavBar">
                 <Col span={6}><a>{this.props.projectConfig.name}</a></Col>
                 <Col span={6}>col-6</Col>
-                <Col span={6}>col-6</Col>
+                <Dropdown overlay={deckglMenu}>
+                    <a  href="#">Deck.gl <Icon type="down" />
+                    </a>
+                </Dropdown>
                 <Dropdown overlay={menu}>
                     <a  href="#">Mapbox <Icon type="down" />
                     </a>

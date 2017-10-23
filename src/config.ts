@@ -27,6 +27,19 @@ var Config = {
             center:[108.9469845742,34.2701623678],
             style:"mapbox://styles/mapbox/streets-v9",
             containerStyle: {height: "100%"}
+        },
+        "deckGL": {
+            "viewport": {
+                width: 500,
+                height: 500,
+                longitude: -100,
+                latitude: 40.7,
+                zoom: 3,
+                pitch: 0,
+                bearing: 0
+            },
+            center: [-100,40.7],
+            "accessToken": "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA",
         }
     }
 }

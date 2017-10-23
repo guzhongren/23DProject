@@ -16,8 +16,9 @@ import { LeafletMap } from "./components/baseComponents/map/leaflet";
 interface State {
   map: any;
 }
-import { CircleDemo } from "./components/mapboxDemo/circle"
-import ThreeD, { Props } from "./components/mapboxDemo/3D"
+import { CircleDemo } from "./components/mapboxDemo/circle";
+import ThreeD, { Props } from "./components/mapboxDemo/3D";
+import DeckGlDemo from './components/deckgl';
 
 const Index = () => (
   <Router basename="/">
@@ -26,13 +27,22 @@ const Index = () => (
       <Switch>
         <Route exact path="/" component={MainCom} ></Route>
         <Route path="/circle" component={MapboxDemoList} ></Route>
-        {<Route path="/3D" component={threeD} ></Route>}
-        {/* <Route path="/ags" component={AGS} ></Route> */}
+        {<Route path="/mapbox3D" component={threeD} ></Route>}
+        {<Route path="/deckgl" component={Deck} ></Route>}
         {<Route component={NoMatch} />}
       </Switch>
     </div>
   </Router>
 );
+
+const Deck = ({ match }) => {
+  return (
+    <div style={MapContentHeight}>
+      <DeckGlDemo config={Config.apps.deckGL} />
+    </div>
+  )
+};
+
 const NoMatch = ({ match }) => {
   <h1>请选择正确的路由。。。</h1>
 };

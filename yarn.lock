@@ -1800,6 +1800,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+d3-hexbin@^0.2.1:
+  version "0.2.2"
+  resolved "http://r.cnpmjs.org/d3-hexbin/download/d3-hexbin-0.2.2.tgz#9c5837dacfd471ab05337a9e91ef10bfc4f98831"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "http://r.cnpmjs.org/dashdash/download/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -1825,6 +1829,21 @@ debug@^3.1.0:
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "http://r.cnpmjs.org/decamelize/download/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+
+deck.gl@^4.1.5:
+  version "4.1.5"
+  resolved "http://r.cnpmjs.org/deck.gl/download/deck.gl-4.1.5.tgz#4f99d052086096a6ffd82a022c89898808c48e7e"
+  dependencies:
+    d3-hexbin "^0.2.1"
+    earcut "^2.0.6"
+    gl-mat4 "^1.1.4"
+    gl-vec2 "^1.0.0"
+    gl-vec3 "^1.0.3"
+    gl-vec4 "^1.0.1"
+    hammerjs "^2.0.8"
+    lodash.flattendeep "^4.4.0"
+    prop-types "^15.5.8"
+    seer "^0.2.3"
 
 deep-equal@1.0.1, deep-equal@^1.0.0, deep-equal@^1.0.1:
   version "1.0.1"
@@ -2027,7 +2046,7 @@ duplexer3@^0.1.4:
   version "0.1.4"
   resolved "http://r.cnpmjs.org/duplexer3/download/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
 
-earcut@^2.0.3:
+earcut@^2.0.3, earcut@^2.0.6:
   version "2.1.1"
   resolved "http://r.cnpmjs.org/earcut/download/earcut-2.1.1.tgz#157634e5f3ebb42224e475016e86a5b6ce556b45"
 
@@ -2625,6 +2644,38 @@ getpass@^0.1.1:
   resolved "http://r.cnpmjs.org/getpass/download/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+gl-constants@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/gl-constants/download/gl-constants-1.0.0.tgz#597a504e364750ff50253aa35f8dea7af4a5d233"
+
+gl-mat3@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/gl-mat3/download/gl-mat3-1.0.0.tgz#89633219ca429379a16b9185d95d41713453b912"
+
+gl-mat4@^1.1.4:
+  version "1.1.4"
+  resolved "http://r.cnpmjs.org/gl-mat4/download/gl-mat4-1.1.4.tgz#1e895b55892e56a896867abd837d38f37a178086"
+
+gl-quat@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/gl-quat/download/gl-quat-1.0.0.tgz#0945ec923386f45329be5dc357b1c8c2d47586c5"
+  dependencies:
+    gl-mat3 "^1.0.0"
+    gl-vec3 "^1.0.3"
+    gl-vec4 "^1.0.0"
+
+gl-vec2@^1.0.0:
+  version "1.0.0"
+  resolved "http://r.cnpmjs.org/gl-vec2/download/gl-vec2-1.0.0.tgz#77fce6ae9612856d6c8b621cd261cd8281b9c637"
+
+gl-vec3@^1.0.3:
+  version "1.0.3"
+  resolved "http://r.cnpmjs.org/gl-vec3/download/gl-vec3-1.0.3.tgz#110fd897d0729f6398307381567d0944941bf22b"
+
+gl-vec4@^1.0.0, gl-vec4@^1.0.1:
+  version "1.0.1"
+  resolved "http://r.cnpmjs.org/gl-vec4/download/gl-vec4-1.0.1.tgz#97d96878281b14b532cbce101785dfd1cb340964"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -3554,6 +3605,10 @@ lodash.flatten@^4.2.0:
   version "4.4.0"
   resolved "http://r.cnpmjs.org/lodash.flatten/download/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
 
+lodash.flattendeep@^4.4.0:
+  version "4.4.0"
+  resolved "http://r.cnpmjs.org/lodash.flattendeep/download/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
+
 lodash.foreach@^4.3.0:
   version "4.5.0"
   resolved "http://r.cnpmjs.org/lodash.foreach/download/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
@@ -3672,6 +3727,19 @@ lru-cache@^4.0.1:
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
+
+luma.gl@^4.0.5:
+  version "4.0.5"
+  resolved "http://r.cnpmjs.org/luma.gl/download/luma.gl-4.0.5.tgz#adb9add03d1ba1f819a9531e159c83fc71c98f50"
+  dependencies:
+    gl-constants "^1.0.0"
+    gl-mat4 "^1.1.4"
+    gl-quat "^1.0.0"
+    gl-vec2 "^1.0.0"
+    gl-vec3 "^1.0.3"
+    gl-vec4 "^1.0.1"
+    seer "^0.2.2"
+    webgl-debug "^1.0.2"
 
 macaddress@^0.2.8:
   version "0.2.8"
@@ -5571,6 +5639,10 @@ seedrandom@^2.4.2:
   version "2.4.3"
   resolved "http://r.cnpmjs.org/seedrandom/download/seedrandom-2.4.3.tgz#2438504dad33917314bff18ac4d794f16d6aaecc"
 
+seer@^0.2.2, seer@^0.2.3:
+  version "0.2.3"
+  resolved "http://r.cnpmjs.org/seer/download/seer-0.2.3.tgz#e7ba529921330327dbbf30141fbf052296772fb7"
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "http://r.cnpmjs.org/select-hose/download/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
@@ -6517,6 +6589,10 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   resolved "http://r.cnpmjs.org/wbuf/download/wbuf-1.7.2.tgz#d697b99f1f59512df2751be42769c1580b5801fe"
   dependencies:
     minimalistic-assert "^1.0.0"
+
+webgl-debug@^1.0.2:
+  version "1.0.2"
+  resolved "http://r.cnpmjs.org/webgl-debug/download/webgl-debug-1.0.2.tgz#93bac5aed181343a136ad34f249920d3b9ccc69a"
 
 webpack-dev-middleware@^1.11.0:
   version "1.12.0"
