@@ -24,7 +24,7 @@ var Config = {
             mapboxParams:{
                 accessToken: "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA",
             },
-            center:[-74.0066, 40.7135],
+            center:[108.9469845742,34.2701623678],
             style:"mapbox://styles/mapbox/streets-v9",
             containerStyle: {height: "100%"}
         }
