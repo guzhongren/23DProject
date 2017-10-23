@@ -7,7 +7,7 @@ import * as React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Config from "./config"
 import { Main } from "./components/main";
-import { ProjectNavBar } from "./components/navBar";
+import ProjectNavBar from "./components/navBar";
 import { Mapbox } from "./components/baseComponents/map/mapbox";
 // import { EsriMapExt } from "./components/baseComponents/map/esriMap";
 import { LeafletMap } from "./components/baseComponents/map/leaflet";
@@ -17,6 +17,7 @@ interface State {
   map: any;
 }
 import { CircleDemo } from "./components/mapboxDemo/circle"
+import ThreeD, { Props } from "./components/mapboxDemo/3D"
 
 const Index = () => (
   <Router basename="/">
@@ -25,7 +26,7 @@ const Index = () => (
       <Switch>
         <Route exact path="/" component={MainCom} ></Route>
         <Route path="/circle" component={MapboxDemoList} ></Route>
-        {/* <Route path="/circle" component={MapboxDemoList} ></Route> */}
+        {<Route path="/3D" component={threeD} ></Route>}
         {/* <Route path="/ags" component={AGS} ></Route> */}
         {<Route component={NoMatch} />}
       </Switch>
@@ -36,6 +37,13 @@ const NoMatch = ({ match }) => {
   <h1>请选择正确的路由。。。</h1>
 };
 const MapContentHeight = { height: "calc(100% - 56px)" };
+const threeD = ({ match }) => {
+  return (
+    <div style={MapContentHeight}>
+      <ThreeD config={Config.apps.threeD} />
+    </div>
+  )
+}
 const MapboxDemoList = ({ match }) => {
   return (
     <div style={MapContentHeight}>

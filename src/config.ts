@@ -12,11 +12,19 @@ var Config = {
         containerStyle: {height: "100%"}
     },
     apps:{
-        circleDemo:{
+        "circleDemo":{
             mapboxParams:{
                 accessToken: "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA",
             },
             center:[-122.447303, 37.753574],
+            style:"mapbox://styles/mapbox/streets-v9",
+            containerStyle: {height: "100%"}
+        },
+        "threeD":{
+            mapboxParams:{
+                accessToken: "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA",
+            },
+            center:[-74.0066, 40.7135],
             style:"mapbox://styles/mapbox/streets-v9",
             containerStyle: {height: "100%"}
         }

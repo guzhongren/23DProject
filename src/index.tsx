@@ -1,5 +1,4 @@
-
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'console-polyfill';
 /** 兼容 IE */
