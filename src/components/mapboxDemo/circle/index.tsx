@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ReactMapboxGl from "react-mapbox-gl";
 import  {Map,Layer } from "mapbox-gl";
-import { Button } from "reactstrap";
+import { Button } from "react-bootstrap";
 import { Mapbox } from "../../baseComponents/map/mapbox"
 export interface Props {
     config: any

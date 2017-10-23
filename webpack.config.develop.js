@@ -5,9 +5,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractCSS = new ExtractTextPlugin('css/css.css');
 const extractLESS = new ExtractTextPlugin('css/less.css');
 module.exports = {
-    context: path.resolve(__dirname, 'web'),
+    context: path.resolve(__dirname, 'src'),
     entry: [
-        path.resolve(__dirname, "./web/index.tsx")
+        path.resolve(__dirname, "./src/index.tsx")
     ],
     output: {
         filename: "js/bundle.js",

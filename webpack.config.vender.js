@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 module.exports = {
-    context: path.resolve(__dirname, 'web'),
+    context: path.resolve(__dirname, 'src'),
     entry: {
         vendor: [
             "lodash",

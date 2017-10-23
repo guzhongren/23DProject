@@ -1,9 +1,8 @@
 import * as React from 'react';
-import ReactMapboxGl from "react-mapbox-gl";
 import * as MapboxGl from "mapbox-gl";
-import { Button } from "reactstrap";
-import { Mapbox } from "../baseComponents/map/mapbox"
-
+import { Button } from "react-bootstrap";
+import { Mapbox } from "../baseComponents/map/mapbox";
+import "./style/index.less";
 export interface Props {
     config: any
 }

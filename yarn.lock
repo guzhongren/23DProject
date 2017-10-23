@@ -882,7 +882,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.x, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "http://r.cnpmjs.org/babel-runtime/download/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1952,7 +1952,7 @@ dom-closest@^0.2.0:
   dependencies:
     dom-matches ">=1.0.1"
 
-dom-helpers@^3.2.0:
+dom-helpers@^3.2.0, dom-helpers@^3.2.1:
   version "3.2.1"
   resolved "http://r.cnpmjs.org/dom-helpers/download/dom-helpers-3.2.1.tgz#3203e07fed217bd1f424b019735582fc37b2825a"
 
@@ -3014,7 +3014,7 @@ interpret@^1.0.0:
   version "1.0.4"
   resolved "http://r.cnpmjs.org/interpret/download/interpret-1.0.4.tgz#820cdd588b868ffb191a809506d6c9c8f212b1b0"
 
-invariant@^2.2.1, invariant@^2.2.2:
+invariant@^2.1.0, invariant@^2.2.1, invariant@^2.2.2:
   version "2.2.2"
   resolved "http://r.cnpmjs.org/invariant/download/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -3376,6 +3376,10 @@ jsprim@^1.2.2:
 kdbush@^1.0.1:
   version "1.0.1"
   resolved "http://r.cnpmjs.org/kdbush/download/kdbush-1.0.1.tgz#3cbd03e9dead9c0f6f66ccdb96450e5cecc640e0"
+
+keycode@^2.1.2:
+  version "2.1.9"
+  resolved "http://r.cnpmjs.org/keycode/download/keycode-2.1.9.tgz#964a23c54e4889405b4861a5c9f0480d45141dfa"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -4647,6 +4651,12 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types-extra@^1.0.1:
+  version "1.0.1"
+  resolved "http://r.cnpmjs.org/prop-types-extra/download/prop-types-extra-1.0.1.tgz#a57bd4810e82d27a3ff4317ecc1b4ad005f79a82"
+  dependencies:
+    warning "^3.0.0"
+
 prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0:
   version "15.6.0"
   resolved "http://r.cnpmjs.org/prop-types/download/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
@@ -5111,6 +5121,22 @@ react-addons-transition-group@^15.5.2:
   dependencies:
     react-transition-group "^1.2.0"
 
+react-bootstrap@^0.31.3:
+  version "0.31.3"
+  resolved "http://r.cnpmjs.org/react-bootstrap/download/react-bootstrap-0.31.3.tgz#db2b7d45b00b5dac1ab8b6de3dd97feb3091b849"
+  dependencies:
+    babel-runtime "^6.11.6"
+    classnames "^2.2.5"
+    dom-helpers "^3.2.0"
+    invariant "^2.2.1"
+    keycode "^2.1.2"
+    prop-types "^15.5.10"
+    prop-types-extra "^1.0.1"
+    react-overlays "^0.7.0"
+    react-prop-types "^0.4.0"
+    uncontrollable "^4.1.0"
+    warning "^3.0.0"
+
 react-dom@^16.0.0:
   version "16.0.0"
   resolved "http://r.cnpmjs.org/react-dom/download/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
@@ -5145,6 +5171,22 @@ react-mapbox-gl@^2.7.0:
     "@turf/helpers" "4.7.3"
     deep-equal "1.0.1"
     supercluster "3.0.0"
+
+react-overlays@^0.7.0:
+  version "0.7.3"
+  resolved "http://r.cnpmjs.org/react-overlays/download/react-overlays-0.7.3.tgz#e4caa690ce7cd7d40b2cf9cdc26356cddaf5a0e9"
+  dependencies:
+    classnames "^2.2.5"
+    dom-helpers "^3.2.1"
+    prop-types "^15.5.10"
+    prop-types-extra "^1.0.1"
+    warning "^3.0.0"
+
+react-prop-types@^0.4.0:
+  version "0.4.0"
+  resolved "http://r.cnpmjs.org/react-prop-types/download/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
+  dependencies:
+    warning "^3.0.0"
 
 react-router-dom@^4.1.1:
   version "4.2.2"
@@ -5204,7 +5246,7 @@ reactstrap-tether@1.3.4:
   version "1.3.4"
   resolved "http://r.cnpmjs.org/reactstrap-tether/download/reactstrap-tether-1.3.4.tgz#86d94d30216ffa34ceb2c626f4b9912c0d193894"
 
-reactstrap@^4.6.2:
+reactstrap@^4.8.0:
   version "4.8.0"
   resolved "http://r.cnpmjs.org/reactstrap/download/reactstrap-4.8.0.tgz#eb350642a6282c79c7e1bd8d6f75c627131a42f6"
   dependencies:
@@ -6239,6 +6281,12 @@ unassertify@^2.0.0:
     multi-stage-sourcemap "^0.2.1"
     through "^2.3.7"
     unassert "^1.3.1"
+
+uncontrollable@^4.1.0:
+  version "4.1.0"
+  resolved "http://r.cnpmjs.org/uncontrollable/download/uncontrollable-4.1.0.tgz#e0358291252e1865222d90939b19f2f49f81c1a9"
+  dependencies:
+    invariant "^2.1.0"
 
 underscore@~1.6.0:
   version "1.6.0"
