@@ -63,8 +63,8 @@
     "tslint": "^5.4.2",
     "typescript": "^2.3.3",
     "url-loader": "^0.5.8",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
   },
   "repository": "https://github.com/guzhongren/23DProject.git"
 }
