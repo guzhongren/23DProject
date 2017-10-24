@@ -57,7 +57,8 @@ module.exports = {
             context:__dirname,
             name: '[name]',
             path: path.join(__dirname, 'wwwroot', 'dist', "js", '[name]-manifest.json')
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
 };

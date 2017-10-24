@@ -31,7 +31,12 @@ module.exports = {
         // stats: 'minimal',
         publicPath: "/dist/",
         // layy:true,
-        filename: "js/bundle.js"
+        filename: "js/bundle.js",
+        compress: true,
+        overlay: {
+            warnings: true,
+            errors: true
+        }
     },
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
@@ -93,6 +98,8 @@ module.exports = {
         // // 开启全局的模块热替换(HMR)
         new webpack.NamedModulesPlugin(),
         // 当模块热替换(HMR)时在浏览器控制台输出对用户更友好的模块名字信息
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin()
     ],
 
 };
