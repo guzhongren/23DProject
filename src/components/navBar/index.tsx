@@ -41,7 +41,7 @@ export default class ProjectNavBar extends React.Component<Props, States> {
         const menu = (
             <Menu>
                 <Menu.Item>
-                    <a  href="circle">mapbox3D</a>
+                    <a  href="circle">circle</a>
                 </Menu.Item>
                 <Menu.Item>
                     <a  href="mapbox3D">mapbox3D</a>
@@ -51,7 +51,7 @@ export default class ProjectNavBar extends React.Component<Props, States> {
         return (
             <Row className="projectNavBar">
                 <Col span={6}><a>{this.props.projectConfig.name}</a></Col>
-                <Col span={6}>col-6</Col>
+                <Col span={6}></Col>
                 <Dropdown overlay={deckglMenu}>
                     <a  href="#">Deck.gl <Icon type="down" />
                     </a>
