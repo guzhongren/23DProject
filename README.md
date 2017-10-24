@@ -49,6 +49,10 @@ git clone https://github.com/guzhongren/23DProject.git
 ### 效果
 ![Circle](./wwwroot/imgs/addCircle.png)
 <center>添加圆及图片</center>
+
+![3D](./wwwroot/imgs/3D.png)
+<center>西安钟楼OSMBuildings</center>
+
 ### 参考
 
 React-Mapbox: https://www.npmjs.com/package/react-mapbox-gl
